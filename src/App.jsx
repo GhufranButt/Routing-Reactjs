@@ -10,10 +10,6 @@ import {
 import Home from "./components/Home";
 import About from "./components/About";
 import Dashboared from "./components/Dashboared";
-import Navbar from "./components/Navbar";
-import Param from "./components/Param";
-import User from "./components/User";
-import NotFound from "./NotFound";
 import Userdetails from "./components/Userdetails";
 import Products from "./components/Products";
 import Registerusers from "./components/Registerusers";

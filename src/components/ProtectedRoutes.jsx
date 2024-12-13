@@ -4,8 +4,9 @@ import Navbar from "./Navbar";
 
 const ProtectedRoutes = ({ allowedRoles }) => {
   const storedCredentials = JSON.parse(localStorage.getItem("credentials"));
+  const storedisLoggedIn = localStorage.getItem("isLoggedIn");
 
-  if (!storedCredentials || !storedCredentials.Role) {
+  if (!storedCredentials || !storedCredentials.Role || !storedisLoggedIn) {
     return <Navigate to="/register" />;
   }
 
