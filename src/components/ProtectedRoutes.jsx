@@ -10,11 +10,8 @@ const ProtectedRoutes = ({ allowedRoles }) => {
   }
 
   const userRole = storedCredentials.Role;
-  // console.log("user", userRole, allowedRoles);
 
   if (allowedRoles.includes(userRole)) {
-    // console.log("if", userRole);
-    // console.log("allowedRoles", allowedRoles);
     return (
       <>
         <Navbar />
@@ -22,7 +19,11 @@ const ProtectedRoutes = ({ allowedRoles }) => {
       </>
     );
   } else {
-    return <Navigate to="/" />;
+    return userRole === "Admin" ? (
+      <Navigate to="/adminhome" />
+    ) : (
+      <Navigate to="/" />
+    );
   }
 };
 
